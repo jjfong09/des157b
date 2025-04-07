@@ -1,0 +1,311 @@
+/* CSS RESET*/
+
+*{
+	box-sizing: border-box;
+}
+
+nav ul, nav ol {
+	list-style-type: none;
+}
+
+img{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+h1, h2, h3, p, ul, ol, a{
+	font-family: "Hanken Grotesk", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+/* END RESET */
+
+h2{ 
+	color: #393D42;
+	font-weight: 600;
+	font-size: 0.9em;
+	margin-bottom: 16px;
+	margin-top: 30px;
+}
+
+p{
+	color: #808B9B;
+}
+
+a{
+	color: #808B9B;
+	text-decoration: none;
+	font-size: 0.8em;
+
+}
+
+header{
+	text-align: center;
+	justify-content: center;
+	margin-bottom: auto;
+}
+
+/*  TOGGLE  */
+#toggle-div {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+#toggle-svg {
+	margin-bottom: 2px;
+	width: 30px;
+	height: 30px;
+}
+
+/*  HEADER */
+#italic-header {
+	font-family: "Noto Serif Display", serif;
+	font-style: italic;
+}
+
+#header-container{ 
+	justify-content: center;
+	align-items: center;
+
+	display: flex;
+	overflow: visible;
+	gap: 50px;
+}
+
+#left-icon, #right-icon {
+	width: 40px;
+	height: 40px;
+	margin-top: 30px;
+	animation: spin 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+	0% {
+	  transform: rotate(0deg);
+	}
+	80% {
+	  transform: rotate(360deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+  }
+
+.sparkle {
+	fill: #393D42;
+}
+
+#header-container h1{
+	margin-bottom: 40px;
+	white-space: nowrap;
+	color: #393D42;
+	font-weight: 300;
+	font-size: 13em;
+	letter-spacing: -0.65rem;
+	width: fit-content;
+	text-align: center;
+}
+
+
+body{
+	background-color: #F7F7F7;
+	margin: 0px 60px;
+}
+
+
+/* projects section */
+#projects-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 18px;
+	max-width: 1300px;
+	margin: auto;
+	margin-bottom: 24px;
+
+}
+
+
+#card-container{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+/* card styles */
+svg {
+	width: 15px;
+	height: 15px;
+	transition: transform 200ms ease-in-out;
+}
+
+.card{
+	border-radius: 12px;
+	padding: 36px;
+	flex-grow: 1;
+	transition: 200ms ease-in-out;
+	width: 200px;
+}
+
+.card-content{
+	display: flex;
+	flex-direction: column;
+}
+
+.card-list-item{
+	/* arrow color */
+	color: #586476; 
+	transition: color 300ms ease;
+	display: flex;
+	flex-direction: row;
+	gap: 4px;
+}
+
+.card-list-item a{
+	color: #586476;
+}
+
+.card-list li {
+	margin-bottom: 18px;
+}
+
+.card-list-item:hover a{
+	color: #878787;
+}
+
+.card-list-item:hover svg {
+	color: #878787;
+	transform: rotate(45deg);
+}
+
+/* images */
+#image1 {
+	background-image: url("images/cherryblososm.png");
+	margin-right: 16px;
+	box-shadow: 3px 18px 33px 0px rgba(0, 0, 0, 0.26);
+	background-repeat: no-repeat;
+}
+
+#image2 {
+	background-image: url("images/fishing.png");
+	margin-right: 16px;
+	box-shadow: 3px 18px 33px 0px rgba(0, 0, 0, 0.26);
+}
+
+#image3 {
+	background-image: url("images/walking.png");
+	margin-right: 16px;
+	box-shadow: 3px 18px 33px 0px rgba(0, 0, 0, 0.26);
+}
+
+#image4 {
+	background-image: url("images/rose.png");
+	margin-right: 16px;
+	box-shadow: 3px 18px 33px 0px rgba(0, 0, 0, 0.26);
+}
+
+#banner {
+	display: flex;
+	max-width: 1100px;
+	/* width: auto; */
+	height: 250px;
+	margin: 26px auto 48px auto;
+	flex-wrap: wrap;
+	/* overflow: hidden; */
+}
+
+#banner div {
+	flex: 1;
+	background-position: center;
+	transition: all 1s;
+	border-radius: 16px;
+}
+
+#banner div:hover {
+	flex: 2;
+}
+
+footer{
+	text-align: center;
+}
+
+footer p,footer a{
+	font-size: 0.75em;
+	color: #586476;
+}
+
+#footer-text{
+	display: inline-flex;
+	gap: 24px;
+}
+
+@media (max-width: 768px) {
+    #banner div:hover {
+		flex: 6;
+	}
+}
+
+
+#top-bar {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 38px;
+	font-size: 0.8em;
+	padding-bottom: 18px;
+	border-bottom: 1px solid #BFBFBF;
+}
+
+/* ----------DARK MODE STYLE------------------ */
+
+body.switch {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.switch h2 {
+    color: #ffffff;
+}
+
+body.switch p,
+body.switch a {
+    color: #b3b3b3;
+}
+
+body.switch .card {
+    background-color: #2d2d2d;
+}
+
+/* ARROW COLOR */
+body.switch .card-list-item {
+    color: #b3b3b3;
+}
+
+body.switch .card-list-item a {
+    color: #b3b3b3;
+}
+
+body.switch .card-list-item:hover a {
+    color: #ffffff;
+}
+
+body.switch .sparkle {
+    fill: #ffffff;
+}
+
+body.switch #header-container h1 {
+    color: #ffffff;
+}
+
+body.switch footer p,
+body.switch footer a {
+    color: #b3b3b3;
+}
+
+body.switch #toggle-svg {
+    color: #ffffff;
+}
