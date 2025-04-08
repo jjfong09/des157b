@@ -103,7 +103,7 @@ header{
 #gif {
 	position: absolute;
 	width: 300px;
-	right: 130px;
+	right: 50px;
 	bottom: -60px;
 }
 
@@ -254,12 +254,6 @@ footer p,footer a{
 	gap: 24px;
 }
 
-@media (max-width: 768px) {
-    #banner div:hover {
-		flex: 6;
-	}
-}
-
 
 #top-bar {
 	display: flex;
@@ -321,16 +315,41 @@ body.switch #toggle-svg {
 }
 
 /* ----------RESPONSIVE------------------ */
+
 @media (max-width: 858px) {
 	#header-container h1{
 		font-size: 9em;
+	}
+
+	body {
+		overflow: visible;
+	}
+
+	#gif {
+		visibility: hidden;
 	}
 }
 
 @media (max-width: 600px) {
 	#header-container h1{
-		font-size: 5.5em;
+		font-size: 4em;
 		letter-spacing: -0.1em;
 		margin-top: 24px;
 	}
+
+	body {
+		overflow: visible;
+	}
+
+	#gif {
+		visibility: hidden;
+	}
+
+	#left-icon, #right-icon {
+		width: 40px;
+		height: 40px;
+		margin-top: 5px;
+		animation: spin 2s ease-in-out infinite;
+	}
+
 }
