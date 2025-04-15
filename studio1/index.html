@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blockbuster Video</title>
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+
+	<!-- icons -->
+	<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css">
+
+	<!-- FONTS -->
+	<!-- Taviraj -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gudea&family=Taviraj:ital,wght@1,300&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+	<!-- <h1 id="quote">"Quote""</h1>
+	<p id="credits">MONETERAY BAY AQUARIUM</p> -->
+
+	<section id="title-container">
+		<section id="section1" class="main-text-container">
+			<h1 class="header">Observing the sea life</h1>
+			<p class="subheader">MONETERAY BAY AQUARIUM</p>
+		</section>
+
+		<section id="section2" class="main-text-container hidden">
+			<h1 class="header">Pacific Sea Nettle</h1>
+			<p class="subheader">MONETERAY BAY AQUARIUM</p>
+		</section>
+
+		<section id="section3" class="main-text-container hidden">
+			<h1 class="header">Moon Jellyfish</h1>
+			<p class="subheader">MONETERAY BAY AQUARIUM</p>
+		</section>
+
+		<section id="section4" class="main-text-container hidden">
+			<h1 class="header">Pacific Sardines</h1>
+			<p class="subheader">MONETERAY BAY AQUARIUM</p>
+		</section>
+	</section>
+	
+
+	<!-- video -->
+	<video id="myVideo" muted autoplay loop playsinline>
+		<source src="media/aquarium.mp4" type="video/mp4">
+	
+		<p>Your browswer doesn't support HTML5 video.
+			Here is a <a href="media/aquarium.mp4">Link to the video</a>
+		</p>
+	</video>
+
+	<!-- <footer>
+		<p>add source link</p>
+	</footer> -->
+
+	<!-- full screen -->
+	<i class="ph ph-arrows-out-simple"></i> 
+	
+	<!-- loader animation -->
+	<div class="loading-animation">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100" height="100">
+			<circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="15" r="15" cx="40" cy="65">
+				<animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate>
+			</circle>
+			<circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="15" r="15" cx="100" cy="65">
+				<animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate>
+			</circle>
+			<circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="15" r="15" cx="160" cy="65">
+				<animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate>
+			</circle>
+		</svg>
+	</div>
+
+
+</body>
+</html>
