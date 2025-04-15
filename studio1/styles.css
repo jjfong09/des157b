@@ -95,7 +95,6 @@ h1{
 
 /* LOADER */
 
-
 .loading-animation {
 	position: fixed;
 	top: 0;
@@ -107,3 +106,25 @@ h1{
 	justify-content: center;
 	align-items: center;
 }
+
+.loading-animation img {
+	width: 60px;
+	height: 60px;
+	animation: fish 2s infinite alternate ease-in-out;
+}
+
+@keyframes fish {
+	0% {
+		opacity: .5;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: .5;
+		transform: scale(1.5);
+	}
+}
+
+
