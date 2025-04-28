@@ -2,61 +2,101 @@
 	"title": "No Doubt",
 	"artist": "Enhypen",
 	"duration": "2:47",
-	"song-ID": "44hqFxUWsADWewEJELnncj"
+	"trackID": "44hqFxUWsADWewEJELnncj",
+	"image": "images/nodoubt.jpeg",
+	"release": "2024",
+	"popularity": "78",
+	"album": "ROMANCE : UNTOLD -daydream"
 },
 {
 	"title": "Blue",
 	"artist": "Yung Kai",
 	"duration": "3:34",
-	"song-ID": "3be9ACTxtcL6Zm4vJRUiPG"
+	"trackID": "3be9ACTxtcL6Zm4vJRUiPG",
+	"image": "images/blue.jpeg",
+	"release": "2024",
+	"popularity": "93",
+	"album": "shades of blue"
 },
 {
 	"title": "Done For Me (feat. Kehlani)",
 	"artist": "Charlie Puth, Kehlani",
 	"duration": "3:00",
-	"song-ID": "1lsBTdE6MGsKeZCD6llNu7"
+	"trackID": "1lsBTdE6MGsKeZCD6llNu7",
+	"image": "images/doneforme.jpeg",
+	"release": "2018",
+	"popularity": "71",
+	"album": "Voicenotes"
 },
 {
 	"title": "Hurt My Feelings",
 	"artist": "Tate Mcrae",
 	"duration": "2:02",
-	"song-ID": "4mFcwFOlSCxp6hjemRXwpd"
+	"trackID": "4mFcwFOlSCxp6hjemRXwpd",
+	"image": "images/tate.jpeg",
+	"release": "2023",
+	"popularity": "73",
+	"album": "THINK LATER"
 },
 {
 	"title": "Apna Bana Le",
 	"artist": "Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya",
 	"duration": "4:22",
-	"song-ID": "5bQ6oDLqvw8tywmnSmwEyL"
+	"trackID": "5bQ6oDLqvw8tywmnSmwEyL",
+	"image": "images/apna.jpeg",
+	"release": "2022",
+	"popularity": "76",
+	"album": "Bhediya"
 },
 
 {
 	"title": "toxic till the end",
 	"artist": "ROSÉ",
 	"duration": "2:36",
-	"song-ID": "1z5ebC9238uGoBgzYyvGpQ"
+	"trackID": "1z5ebC9238uGoBgzYyvGpQ",
+	"image": "images/rose.jpeg",
+	"release": "2024",
+	"popularity": "88",
+	"album": "rosie"
 },
 {
 	"title": "MIA",
 	"artist": "GEMINI, CAMO, WOODZ",
 	"duration": "2:02",
-	"song-ID": "5IzjE4F631lSstz8Co5U4O"
+	"trackID": "5IzjE4F631lSstz8Co5U4O",
+	"image": "images/gemini.jpeg",
+	"release": "2021",
+	"popularity": "54",
+	"album": "Inside Out"
 },
 {
 	"title": "run for the hills",
 	"artist": "Tate McRae",
 	"duration": "2:23",
-	"song-ID": "51hyZpbJlIgZIaX3TtMxmu"
+	"trackID": "51hyZpbJlIgZIaX3TtMxmu",
+	"image": "images/tate.jpeg",
+	"release": "2023",
+	"popularity": "82",
+	"album": "THINK LATER"
 },
 {
 	"title": "Heeriye (feat. Arjit Singh)",
 	"artist": "Jasleen Royal, Arjit Singh, Dulquer Salmaan",
 	"duration": "3:14",
-	"song-ID": "5PUXKVVVQ74C3gl5vKy9Li"
+	"trackID": "5PUXKVVVQ74C3gl5vKy9Li",
+	"image": "images/heeriye.jpeg",
+	"release": "2023",
+	"popularity": "78",
+	"album": "Heeriye"
 },
 {
 	"title": "Grey Lines",
 	"artist": "Austin George",
 	"duration": "2:48",
-	"song-ID": "31wd3JOLQpdDMkTAr1TkbM"
+	"trackID": "31wd3JOLQpdDMkTAr1TkbM",
+	"image": "images/greylines.jpeg",
+	"release": "2023",
+	"popularity": "55",
+	"album": "Grey Lines"
 }
 ]
