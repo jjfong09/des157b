@@ -38,7 +38,7 @@ questions.forEach((questionEl, index) => {
 
     // Show next question
     questionEl.classList.add("hidden");
-    if (questions[index + 1]) {
+    if (questions[index + 1]) { // if there is a next question show it
       questions[index + 1].classList.remove("hidden");
     } else {
       alert("Quiz complete!"); // Or show a results page
