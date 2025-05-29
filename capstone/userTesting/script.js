@@ -66,7 +66,7 @@ questions.forEach((questionEl, index) => {
     btn.addEventListener("click", () => {
       // visually show click
       questionEl.querySelectorAll(".answer-btn").forEach(b => b.classList.remove("selected"));
-      
+
       btn.classList.add("selected");
 
       // get answer from button
@@ -133,4 +133,54 @@ async function saveToParse(questionNumber, selectedAnswer) {
     }
 }
 
+async function countAnswersPerQuestion() {
+  const questionNumbers = ["1", "2"];
+  const answers = ["Left", "Right"];
+  const voteData = {}; // store counts
+
+  for (const questionNumber of questionNumbers) {
+    voteData[questionNumber] = {};
+
+    for (const answer of answers) {
+      const query = new Parse.Query("quizResponses");
+      query.equalTo("questionNumber", questionNumber);
+      query.equalTo("selectedAnswer", answer);
+
+      try {
+        const count = await query.count();
+        voteData[questionNumber][answer] = count;
+        console.log(voteData);
+
+      } catch (error) {
+        console.error("Error counting:", error);
+        voteData[questionNumber][answer] = 0;
+      }
+    }
+  }
+  updateBars(voteData);
+}
+
+  function updateBars(voteData) {
+    for (const [question, answers] of Object.entries(voteData)) {
+      const totalVotes = Object.values(answers).reduce((a, b) => a + b, 0);
+  
+      for (const [answer, count] of Object.entries(answers)) {
+        const percent = totalVotes === 0 ? 0 : (count / totalVotes) * 100;
+        const barId = `q${question}-${answer.toLowerCase()}`;
+        const bar = document.getElementById(barId);
+
+        // edit width
+        if (bar) {
+          bar.style.width = `${percent}%`;
+        }
+      }
+    }
+  }
+
+// Example usage:
+countAnswersPerQuestion();
+
+// FUNCTION CALLS -------
+
+countObjects();
 attachIntroScreenListeners();

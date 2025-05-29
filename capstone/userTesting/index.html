@@ -20,7 +20,7 @@
 </head>
 <body>
 
-	<section id="title-screen"> 
+	<section id="title-screen" class="hidden"> 
 		<header>
 			<h1>Visual Design Trends Quiz</h1>
 			<p>An experiment to test how we perceive our digital products</p>	
@@ -159,7 +159,77 @@
 		</aside>
 	</section>
 	  
-	 <!-- <div class="quiz-question" id="q1">
+	<!-- TEMP FINAL SCREEN -->
+	<section id="results-screen" class="quiz-screen">
+		<div class="results-container">
+			<div id="results-text-container">
+				<h1 class="results-title">Congrats!</h1>
+				<p>An experiment to test how we perceive our digital products</p>
+			</div>
+	
+			<section id="q1-result" class="question-result">
+				<h2>Question 1</h2>
+				<div class="result-img-container">
+					<img src="images/placeholder.jpg">
+					<img src="images/placeholder.jpg">
+				</div>
+
+				<div class="data-viz">
+					<div class="results-box">					  
+						<div class="bar-wrapper">
+							<span class="label">Left</span>
+							<div class="bar">
+								<div class="bar-fill" id="q1-left"></div>
+							</div>
+						</div>
+
+						<div class="bar-wrapper">
+							<span class="label">Right</span>
+							<div class="bar">
+								<div class="bar-fill" id="q1-right"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="q1-result" class="question-result">
+				<h2>Question 2</h2>
+				<div class="result-img-container">
+					<img src="images/placeholder.jpg">
+					<img src="images/placeholder.jpg">
+				</div>
+
+				<div class="data-viz">
+					<div class="results-box">					  
+						<div class="bar-wrapper">
+							<span class="label">Left</span>
+							<div class="bar">
+								<div class="bar-fill" id="q2-left"></div>
+							</div>
+						</div>
+
+						<div class="bar-wrapper">
+							<span class="label">Right</span>
+							<div class="bar">
+								<div class="bar-fill" id="q2-right"></div>
+							</div>
+						</div>
+					</div>
+			</section>
+			
+	
+		<!-- <aside class="shape-container">
+			<img class="bg-purple" src="images/purple_spike.png" alt="purple shape decoration">
+			<img class="bg-orange" src="images/orange_star.png" alt="orange shape decoration">
+			<img class="bg-green" src="images/green_clover.png" alt="green shape decoration">	
+		</aside> -->
+	</section>
+
+
+	<!--/ /-------- TESTING BLOCK --------/ /-->
+
+	  	 <!-- <div class="quiz-question" id="q1">
 		<button class="answer-btn" data-answer="Left">Left</button>
 		<button class="answer-btn" data-answer="Right">Right</button>
 		<button class="submit-btn">Submit</button>
@@ -171,11 +241,11 @@
 		<button class="answer-btn" data-answer="Expressive">Expressive</button>
 		<button class="submit-btn">Submit</button>
 	</div> -->
-	  
-	
+
 
 	<!--/ /-------- PARSE JS --------/ /-->
 	<script src="https://unpkg.com/parse/dist/parse.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
+
