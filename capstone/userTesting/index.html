@@ -20,11 +20,11 @@
 </head>
 <body>
 
-	<section id="title-screen" class="hidden"> 
+	<section id="title-screen"> 
 		<header>
 			<h1>Visual Design Trends Quiz</h1>
 			<p>An experiment to test how we perceive our digital products</p>	
-			<button>Let’s Begin</button>
+			<button class="nxt-btn">Let’s Begin</button>
 		</header>
 
 		<img class="title-purple" src="images/purple_flower.png" alt="purple shape decoration">
@@ -97,7 +97,7 @@
 
 	</section>
 
-	<section id="q1-screen" class="quiz-screen">
+	<section id="q1-screen" class="quiz-screen hidden">
 		<div class="quiz-content-container">
 			<div class="quiz-text-container">
 				<p class="question-label">Question 1</p>
@@ -128,7 +128,36 @@
 		</aside>
 	</section>
 
+	<section id="q2-screen" class="quiz-screen hidden">
+		<div class="quiz-content-container">
+			<div class="quiz-text-container">
+				<p class="question-label">Question 2</p>
+				<h1 class="question-title">Which design trend do you associate more with innovation and the future?</h1>
+			</div>
+			
+			<div class="question-img-container">
+				<img src="images/placeholder.jpg">
+				<img src="images/placeholder.jpg">
+			</div>
+
+			<div class="quiz-question" id="q2">
+				<div class="answer-btn-container">
+					<button class="answer-btn" data-answer="Left">Left</button>
+					<button class="answer-btn" data-answer="Right">Right</button>
+				</div>
+				<button class="submit-btn">Submit</button>
+			</div>
+		</div>
+
+		<div class="quiz-btn-container">
+		</div>
 	
+		<aside class="shape-container">
+			<img class="bg-purple" src="images/purple_spike.png" alt="purple shape decoration">
+			<img class="bg-orange" src="images/orange_star.png" alt="orange shape decoration">
+			<img class="bg-green" src="images/green_clover.png" alt="green shape decoration">	
+		</aside>
+	</section>
 	  
 	 <!-- <div class="quiz-question" id="q1">
 		<button class="answer-btn" data-answer="Left">Left</button>
