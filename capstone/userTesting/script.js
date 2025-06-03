@@ -177,10 +177,8 @@ async function countAnswersPerQuestion() {
     }
   }
 
-// Example usage:
+// // Example usage:
 countAnswersPerQuestion();
 
-// FUNCTION CALLS -------
-
-countObjects();
+// // FUNCTION CALLS -------
 attachIntroScreenListeners();
