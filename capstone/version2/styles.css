@@ -38,14 +38,14 @@
 		background-color: #F1F0E6;
 	}
 
-	body {
+	.no-overflow {
 		overflow: visible;
 		max-height: 750px;
 	}
 
-	/* #results-screen {
-		overflow: visible;
-	} */
+	.overflow {
+		overflow-y: visible;
+	}
 
 	/* ------------- BUTTONS ---------------- */
 	button {
@@ -53,7 +53,6 @@
 		color: white;
 		border-radius: 100px;
 		padding: 10px 16px;
-		box-shadow: 0px 77px 21px 0px rgba(0, 0, 0, 0.00), 0px 49px 20px 0px rgba(0, 0, 0, 0.01), 0px 28px 17px 0px rgba(0, 0, 0, 0.05), 0px 12px 12px 0px rgba(0, 0, 0, 0.09), 0px 3px 7px 0px rgba(0, 0, 0, 0.10);
 		border: none;
 		transition: background-color 0.3s ease, color 0.3s ease;
 		cursor: pointer;
@@ -61,6 +60,10 @@
 
 	button:hover {
 		background-color: #205747;	
+	}
+
+	.nxt-btn, .submit-btn {
+		box-shadow: 0px 77px 21px 0px rgba(0, 0, 0, 0.00), 0px 49px 20px 0px rgba(0, 0, 0, 0.01), 0px 28px 17px 0px rgba(0, 0, 0, 0.05), 0px 12px 12px 0px rgba(0, 0, 0, 0.09), 0px 3px 7px 0px rgba(0, 0, 0, 0.10);
 	}
 
 	/* ------------- TITLE SCREEN HEADER ---------------- */
@@ -119,14 +122,20 @@
 		justify-content: center;
 		align-items: flex-start;
 
-		margin: 180px 200px;
+		margin: 180px 300px;
 	}
 
 	#background-screen .text-container {
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
-		margin-bottom: 28px;
+		margin-bottom: 36px;
+	}
+
+	#background-screen .text-container p {
+		font-family: "Inter", sans-serif;
+		font-size: 0.9em;
+		color: #736D62;
 	}
 
 	/* --- IMAGES ---- */
@@ -143,6 +152,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 12px;
+		flex: 1;
 		text-align: center;
 	}
 
@@ -150,6 +160,22 @@
 		display: flex;
 		gap: 12px;
 		width: 100%;
+	}
+
+	#background-screen .img-caption {
+		display: flex;
+		flex-direction: column;
+		gap: 3px;
+		font-size: 0.9em;
+		font-weight: 400;
+		margin-top: 4px;
+	}
+
+	#background-screen .img-caption p:last-child {
+		font-family: "Inter", sans-serif;
+		font-size: 0.8em;
+		color: #736D62;
+		font-weight: 400;
 	}
 
 	/* --- SHAPES ---- */
@@ -193,7 +219,8 @@
 
 	#intro-screen p{
 		font-family: "Inter", sans-serif;
-		font-weight: 300;
+		font-weight: 400;
+		color: #736D62;
 	}
 
 	/*  button s
@@ -207,7 +234,7 @@
 		text-align: center;
 		max-width: 700px;
 
-		margin: 40px auto;
+		margin: 0px auto 40px auto;
 
 	}
 
@@ -216,7 +243,7 @@
 		flex-direction: column;
 		justify-content: center;
 
-		margin: 40px auto;
+		margin: 75px auto;
 	}
 
 	.question-label{
@@ -239,6 +266,14 @@
 		text-align: center;
 	}
 
+	.img-sources {
+		text-align: center;
+		font-size: 0.6em;
+		font-family: 'Inter', sans-serif;
+		margin-top: 20px;
+		color: #736D62;
+	}
+
 	/* ------------- QUIZ IMAGES ---------------- */
 
 	.question-img-container {
@@ -246,13 +281,22 @@
 		justify-content: center;
 		gap: 16px;
 		margin-bottom: 40px;
-		width: 100%;
- 		height: auto;
+		/* width: auto;
+ 		height: 300px; */
 	}
 		
 	.question-img-container img {
-		width: 450px;
+		width: auto;
+		height: 325px;
+		border-radius: 12px;
 	}
+
+	/*  SPECIAL CASES */
+
+	.question-img-container .horizontal-quiz-img {
+		height: 250px;
+	}
+	
 
 	/* ------------- QUIZ BUTTONS ---------------- */
 
@@ -288,23 +332,25 @@
 		right: 80px;
 	}
 
-	.quiz-btn-container {
-		width: 100%;
-		display: flex;
-		justify-content: center;
 
-		display: flex;
-		justify-content: center;
-
-		position: absolute;
-		bottom: 60px;
-	}
-
-		/* ------------- CONGRATS SLIDE ---------------- */
+		/* ------------- RESULTS SLIDE ---------------- */
 
 		#results-text-container {
-			margin-bottom: 58px;
+			text-align: center;
+			margin: 0px auto 120px auto;
+			max-width: 700px;
 		}
+		
+		#results-screen h1{
+			margin-bottom: 12px;
+		}
+
+		.results-subtitle {
+			font-family: "Inter", sans-serif;
+			color: #736D62;
+			text-align: center;
+		}
+
 
 		.question-result {
 			display: flex;
@@ -314,35 +360,61 @@
 
 		#results-screen {
 			margin: 120px 200px;
+			background-color: #F1F0E6;
 		}
 
 		.result-img-container {
 			display: flex;
 			justify-content: center;
 			gap: 16px;
-			/* width: 100%; */
-			height: 300px;
-			aspect-ratio: 4 / 3;     
 		}
 	
 		.result-img-container img {
-			/* width: 100%; */
-			height: 100%;
-			object-fit: cover; /* or 'contain' */
-			display: block;
+			width: auto;
+			height: 325px;
+			border-radius: 12px;
 		}
 
-		/* ------------- RESULTS BARS ---------------- */
+		.result-img-container .horizontal-quiz-img {
+			height: 250px;
+		}
+	
+		/*  SPECIAL CASES */
+	
+		.question-img-container .horizontal-quiz-img {
+			height: 250px;
+		}
+
+		#q4-result {
+			margin-bottom: 88px;
+		}
+
+		/* ------------- RESULTS BUTTONS ---------------- */
+
+		#results-btn-container {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 88px;
+		}
+
+		#results-btn-container button {
+			padding: 21px 42px;
+		}
+		/* ------------- DATA VIZ BARS ---------------- */
 
 
 		.results-box {
 			max-width: 600px;
-			margin: 8px auto 64px auto;
 			border: 1px solid #ccc;
+			margin: 8px auto 120px auto;
+
 			padding: 24px;
 			border-radius: 12px;
 			background: white;
 		  }
+
+		/* #q1-result, #q2-result, #q3-result {
+		} */
 
 		  .bar-wrapper {
 			margin-bottom: 16px;
@@ -367,3 +439,4 @@
 			border-radius: 12px;
 		  }
 	
+		  

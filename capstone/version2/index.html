@@ -18,13 +18,13 @@
 	<link rel="stylesheet" href="styles.css">
 	
 </head>
-<body>
+<body class="no-overflow">
 
-	<section id="title-screen"> 
+	<section id="title-screen" class="hidden"> 
 		<header>
 			<h1>Visual Design Trends Quiz</h1>
 			<p>An experiment to test how we perceive our digital products</p>	
-			<button class="nxt-btn">Let’s Begin</button>
+			<button class="nxt-btn">Let's Begin</button>
 		</header>
 
 		<img class="title-purple" src="images/purple_flower.png" alt="purple shape decoration">
@@ -44,28 +44,41 @@
 
 			<div class="text-container">
 				<h1>But first some background...</h1>
-				<p>An experiment to test how we perceive our digital products</p>	
+				<p>The change in design trends over the years not only reflect shifts in aesthetics, but also shifts culture, and technology. Understanding them helps us recognize why certain styles feel "modern" or "dated," and how visual choices shape our experience with the product we use everyday. Below are some popular design trends from he past few decades, largely influenced by new tech and major companies from Apple to Airbnb.
+				</p>	
 			</div>
 		
 			<aside class="img-container">
 				<div class="img-wrapper">
-					<img src="images/placeholder.jpg">
-					<p>caption</p>
+					<img src="images/apple.jpg">
+					<div class="img-caption">
+						<p>Skeuomorphism (1980)</p>
+						<p>(blog.logrocket.com)</p>
+					</div>
 				</div>
 
 				<div class="img-wrapper">
-					<img src="images/placeholder.jpg">
-					<p>caption</p>
+					<img src="images/neobrutal.jpg">
+					<div class="img-caption">
+						<p>Brutalism (2015)</p>
+						<p>(medium.com)</p>
+					</div>
 				</div>
 
 				<div class="img-wrapper">
-					<img src="images/placeholder.jpg">
-					<p>caption</p>
+					<img src="images/control_center.png">
+					<div class="img-caption">
+						<p>Glassmorphism (2020)</p>
+						<p>(support.apple.com)</p>
+					</div>
 				</div>
 
 				<div class="img-wrapper">
-					<img src="images/placeholder.jpg">
-					<p>caption</p>
+					<img src="images/airbnb.jpg">
+					<div class="img-caption">
+						<p>3D UI (2024)</p>
+						<p>(www.airbnb.com)</p>
+					</div>
 				</div>
 			</aside>
 
@@ -105,8 +118,8 @@
 			</div>
 			
 			<div class="question-img-container">
-				<img src="images/placeholder.jpg">
-				<img src="images/placeholder.jpg">
+				<img src="images/q1_left.png"  alt="Old Apple Books Screen">
+				<img src="images/q1_right.png" alt="Modern Apple Books Screen">
 			</div>
 
 			<div class="quiz-question" id="q1">
@@ -116,11 +129,10 @@
 				</div>
 				<button class="submit-btn">Submit</button>
 			</div>
+
+			<p class="img-sources">Image Sources: webdesignmuseum.org</p>
 		</div>
 
-		<div class="quiz-btn-container">
-		</div>
-	
 		<aside class="shape-container">
 			<img class="bg-purple" src="images/purple_spike.png" alt="purple shape decoration">
 			<img class="bg-orange" src="images/orange_star.png" alt="orange shape decoration">
@@ -132,12 +144,12 @@
 		<div class="quiz-content-container">
 			<div class="quiz-text-container">
 				<p class="question-label">Question 2</p>
-				<h1 class="question-title">Which design trend do you associate more with innovation and the future?</h1>
+				<h1 class="question-title">Which design style do you associate more with innovation and the future?</h1>
 			</div>
 			
 			<div class="question-img-container">
-				<img src="images/placeholder.jpg">
-				<img src="images/placeholder.jpg">
+				<img class="horizontal-quiz-img" src="images/q2_left.png"  alt="Apple Vision Pro Design">
+				<img class="horizontal-quiz-img" src="images/q2_right.png"  alt="Google Expressive Design">
 			</div>
 
 			<div class="quiz-question" id="q2">
@@ -147,9 +159,8 @@
 				</div>
 				<button class="submit-btn">Submit</button>
 			</div>
-		</div>
 
-		<div class="quiz-btn-container">
+			<p class="img-sources">Image Sources: linkedin.com, blog.google</p>
 		</div>
 	
 		<aside class="shape-container">
@@ -158,21 +169,90 @@
 			<img class="bg-green" src="images/green_clover.png" alt="green shape decoration">	
 		</aside>
 	</section>
+
+
+<section id="q3-screen" class="quiz-screen hidden">
+		<div class="quiz-content-container">
+			<div class="quiz-text-container">
+				<p class="question-label">Question 3</p>
+				<h1 class="question-title">Which of these feels more secure to use?</h1>
+			</div>
+			
+			<div class="question-img-container">
+				<img src="images/q3_left.png" alt="Chime Banking App Screen">
+				<img src="images/q3_right.png"  alt="Mobile Banking App Screen">
+			</div>
+
+			<div class="quiz-question" id="q3">
+				<div class="answer-btn-container">
+					<button class="answer-btn" data-answer="Left">Left</button>
+					<button class="answer-btn" data-answer="Right">Right</button>
+				</div>
+				<button class="submit-btn">Submit</button>
+			</div>
+
+			<p class="img-sources">Image Sources: chime.com, dribble.com</p>
+		</div>
+	
+		<aside class="shape-container">
+			<img class="bg-purple" src="images/purple_spike.png" alt="purple shape decoration">
+			<img class="bg-orange" src="images/orange_star.png" alt="orange shape decoration">
+			<img class="bg-green" src="images/green_clover.png" alt="green shape decoration">	
+		</aside>
+	</section>
+
+	<section id="q4-screen" class="quiz-screen hidden">
+		<div class="quiz-content-container">
+			<div class="quiz-text-container">
+				<p class="question-label">Question 4</p>
+				<h1 class="question-title">Which version of Airbnb's design feels more welcoming to you?</h1>
+			</div>
+			
+			<div class="question-img-container">
+				<img class="horizontal-quiz-img" src="images/q4_left.png" alt="Chime Banking App Screen">
+				<img class="horizontal-quiz-img" src="images/q4_right.png"  alt="Mobile Banking App Screen">
+			</div>
+
+			<div class="quiz-question" id="q4">
+				<div class="answer-btn-container">
+					<button class="answer-btn" data-answer="Left">Left</button>
+					<button class="answer-btn" data-answer="Right">Right</button>
+				</div>
+				<button class="submit-btn">Submit</button>
+			</div>
+
+			<p class="img-sources">Image Sources: airbnb.com, designweek.co.uk</p>
+		</div>
+	
+		<aside class="shape-container">
+			<img class="bg-purple" src="images/purple_spike.png" alt="purple shape decoration">
+			<img class="bg-orange" src="images/orange_star.png" alt="orange shape decoration">
+			<img class="bg-green" src="images/green_clover.png" alt="green shape decoration">	
+		</aside>
+	</section>
+	
 	  
 	<!-- TEMP FINAL SCREEN -->
-	<section id="results-screen" class="quiz-screen hidden">
+	<section id="results-screen" class="quiz-screen">
 		<div class="results-container">
 			<div id="results-text-container">
 				<h1 class="results-title">Congrats!</h1>
-				<p>An experiment to test how we perceive our digital products</p>
+				<p class="results-subtitle">
+					This quiz explored how people respond to minimalist versus expressive design. Minimalism emphasizes clarity and functionality, while expressiveness leans into personality and emotion. By comparing these styles, we aimed to understand how aesthetics influence our sense of innovation, trust, and engagement. As technology like AI and spatial computing redefines what digital products can be, your choices help us reflect on where design is heading.
+				</p>
 			</div>
 	
 			<section id="q1-result" class="question-result">
-				<h2>Question 1</h2>
-				<div class="result-img-container">
-					<img src="images/placeholder.jpg">
-					<img src="images/placeholder.jpg">
+				<div class="quiz-text-container">
+					<p class="question-label">Question 1</p>
+					<h1 class="question-title">Which design style feels more engaging to you</h1>
 				</div>
+				<!-- <h2>Question 1</h2> -->
+				<div class="result-img-container">
+					<img src="images/q1_left.png">
+					<img src="images/q1_right.png">
+				</div>
+				<p class="results-subtitle">This example compared the desig</p>
 
 				<div class="data-viz">
 					<div class="results-box">					  
@@ -193,12 +273,17 @@
 				</div>
 			</section>
 
-			<section id="q1-result" class="question-result">
-				<h2>Question 2</h2>
-				<div class="result-img-container">
-					<img src="images/placeholder.jpg">
-					<img src="images/placeholder.jpg">
+			<section id="q2-result" class="question-result">
+				<div class="quiz-text-container">
+					<p class="question-label">Question 2</p>
+					<h1 class="question-title">Which design style do you associate more with innovation and the future?</h1>
 				</div>
+				<div class="result-img-container">
+					<img class="horizontal-quiz-img" src="images/q2_left.png">
+					<img class="horizontal-quiz-img" src="images/q2_right.png">
+				</div>
+
+				<p class="results-subtitle">This example compared the desig</p>
 
 				<div class="data-viz">
 					<div class="results-box">					  
@@ -217,15 +302,83 @@
 						</div>
 					</div>
 			</section>
+
+			<section id="q3-result" class="question-result">
+				<div class="quiz-text-container">
+					<p class="question-label">Question 3</p>
+					<h1 class="question-title">Which of these feels more secure to use?</h1>
+				</div>
+				<div class="result-img-container">
+					<img class="horizontal-quiz-img" src="images/q3_left.png">
+					<img class="horizontal-quiz-img" src="images/q3_right.png">
+				</div>
+
+				<p class="results-subtitle">This example compared the desig</p>
+
+
+				<div class="data-viz">
+					<div class="results-box">					  
+						<div class="bar-wrapper">
+							<span class="label">Left</span>
+							<div class="bar">
+								<div class="bar-fill" id="q3-left"></div>
+							</div>
+						</div>
+
+						<div class="bar-wrapper">
+							<span class="label">Right</span>
+							<div class="bar">
+								<div class="bar-fill" id="q3-right"></div>
+							</div>
+						</div>
+					</div>
+			</section>
 			
+			<section id="q4-result" class="question-result">
+				<div class="quiz-text-container">
+					<p class="question-label">Question 4</p>
+					<h1 class="question-title">Which version of Airbnb's design feels more welcoming to you?</h1>
+				</div>
+				<div class="result-img-container">
+					<img class="horizontal-quiz-img" src="images/q4_left.png">
+					<img class="horizontal-quiz-img" src="images/q4_right.png">
+				</div>
+
+				<p class="results-subtitle">This example compared the desig</p>
+
+				<div class="data-viz">
+					<div class="results-box">					  
+						<div class="bar-wrapper">
+							<span class="label">Left</span>
+							<div class="bar">
+								<div class="bar-fill" id="q4-left"></div>
+							</div>
+						</div>
+
+						<div class="bar-wrapper">
+							<span class="label">Right</span>
+							<div class="bar">
+								<div class="bar-fill" id="q4-right"></div>
+							</div>
+						</div>
+					</div>
+
+					<div id="results-btn-container">
+						<button id="retake-quiz-btn">Retake Quiz</button>
+					</div>
+
+			</section>
 	
-		<!-- <aside class="shape-container">
+			
+
+		<aside class="shape-container">
 			<img class="bg-purple" src="images/purple_spike.png" alt="purple shape decoration">
 			<img class="bg-orange" src="images/orange_star.png" alt="orange shape decoration">
 			<img class="bg-green" src="images/green_clover.png" alt="green shape decoration">	
-		</aside> -->
+		</aside>
 	</section>
 
+	
 
 	<!--/ /-------- TESTING BLOCK --------/ /-->
 

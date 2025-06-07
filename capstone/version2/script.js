@@ -110,8 +110,11 @@ function toggleQuizScreens() {
       // Show next screen if it exists
       if (i + 1 < screens.length) {
         screens[i + 1].classList.remove("hidden");
+        const body = document.querySelector('body')
+        body.className = 'overflow'
       } else {
-        alert("Quiz complete!");
+        // Quiz complete — show results screen
+        alert('quiz complete!')
       }
       break;
     }
@@ -134,7 +137,7 @@ async function saveToParse(questionNumber, selectedAnswer) {
 }
 
 async function countAnswersPerQuestion() {
-  const questionNumbers = ["1", "2"];
+  const questionNumbers = ["1", "2", "3", "4"];
   const answers = ["Left", "Right"];
   const voteData = {}; // store counts
 
