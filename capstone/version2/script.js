@@ -171,10 +171,16 @@ async function countAnswersPerQuestion() {
         const percent = totalVotes === 0 ? 0 : (count / totalVotes) * 100;
         const barId = `q${question}-${answer.toLowerCase()}`;
         const bar = document.getElementById(barId);
+        const percentElement = document.getElementById(`${barId}-percent`);
 
         // edit width
         if (bar) {
           bar.style.width = `${percent}%`;
+        }
+
+        // update percentage text
+        if (percentElement) {
+          percentElement.textContent = `${Math.round(percent)}%`;
         }
       }
     }
@@ -185,3 +191,25 @@ countAnswersPerQuestion();
 
 // // FUNCTION CALLS -------
 attachIntroScreenListeners();
+
+// Add retake quiz functionality
+const retakeQuizBtn = document.querySelector('#retake-quiz-btn');
+if (retakeQuizBtn) {
+  retakeQuizBtn.addEventListener('click', () => {
+    // Hide results screen
+    const resultsScreen = document.querySelector('#results-screen');
+    resultsScreen.classList.add('hidden');
+
+    // Show title screen
+    const titleScreen = document.querySelector('#title-screen');
+    titleScreen.classList.remove('hidden');
+
+    // Reset any selected answers
+    document.querySelectorAll('.answer-btn.selected').forEach(btn => {
+      btn.classList.remove('selected');
+    });
+
+    // Reset body class
+    document.body.className = 'no-overflow';
+  });
+}

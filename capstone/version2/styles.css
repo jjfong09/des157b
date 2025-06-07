@@ -14,7 +14,7 @@
 		display: block;
 	}
 
-	h1, h2, h3, h4, p, ul, ol, a {
+	h1, h2, h3, h4, p, ul, ol, a, span {
 		font-family: "Fraunces", serif;
 		margin: 0;
 		padding: 0;
@@ -39,7 +39,8 @@
 	}
 
 	.no-overflow {
-		overflow: visible;
+		overflow-y: visible;
+		overflow-x: hidden;
 		max-height: 750px;
 	}
 
@@ -129,12 +130,11 @@
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
-		margin-bottom: 36px;
+		margin-bottom: 58px;
 	}
 
 	#background-screen .text-container p {
 		font-family: "Inter", sans-serif;
-		font-size: 0.9em;
 		color: #736D62;
 	}
 
@@ -300,6 +300,10 @@
 
 	/* ------------- QUIZ BUTTONS ---------------- */
 
+	#begin-btn {
+		padding: 21px 42px;
+	}
+
 	.answer-btn {
 		background-color: transparent;
 		color: #113A2E;
@@ -338,19 +342,26 @@
 		#results-text-container {
 			text-align: center;
 			margin: 0px auto 120px auto;
-			max-width: 700px;
+			max-width: 660px;
 		}
 		
-		#results-screen h1{
-			margin-bottom: 12px;
+		#results-text-container h1{
+			font-size: 5em;
+			margin-bottom: 42px;
 		}
 
 		.results-subtitle {
 			font-family: "Inter", sans-serif;
 			color: #736D62;
 			text-align: center;
+			max-width: 600px;
+			margin: 0 auto 12px auto;
 		}
 
+		.question-text {
+			font-weight: 600;
+			font-family: "Inter", sans-serif;
+		}
 
 		.question-result {
 			display: flex;
@@ -397,7 +408,7 @@
 			margin-bottom: 88px;
 		}
 
-		#results-btn-container button {
+		#retake-quiz-btn {
 			padding: 21px 42px;
 		}
 		/* ------------- DATA VIZ BARS ---------------- */
@@ -413,14 +424,16 @@
 			background: white;
 		  }
 
-		/* #q1-result, #q2-result, #q3-result {
-		} */
 
 		  .bar-wrapper {
-			margin-bottom: 16px;
 			display: flex;
 			align-items: center;
+			margin-bottom: 10px;
 			gap: 12px;
+		  }
+
+		  .bar-wrapper .label {
+				color: #123c34;
 		  }
 		  
 		  .bar {
@@ -437,6 +450,13 @@
 			background-color: #123c34; /* Change per style */
 			transition: width 0.5s ease;
 			border-radius: 12px;
+		  }
+
+		  .percentage {
+			margin-left: 10px;
+			font-size: 14px;
+			color: #666;
+			min-width: 45px;
 		  }
 	
 		  

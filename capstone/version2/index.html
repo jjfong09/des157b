@@ -20,11 +20,11 @@
 </head>
 <body class="no-overflow">
 
-	<section id="title-screen" class="hidden"> 
+	<section id="title-screen"> 
 		<header>
 			<h1>Visual Design Trends Quiz</h1>
 			<p>An experiment to test how we perceive our digital products</p>	
-			<button class="nxt-btn">Let's Begin</button>
+			<button id="begin-btn" class="nxt-btn">Let's Begin</button>
 		</header>
 
 		<img class="title-purple" src="images/purple_flower.png" alt="purple shape decoration">
@@ -233,12 +233,15 @@
 	
 	  
 	<!-- TEMP FINAL SCREEN -->
-	<section id="results-screen" class="quiz-screen">
+	<section id="results-screen" class="quiz-screen hidden">
 		<div class="results-container">
 			<div id="results-text-container">
 				<h1 class="results-title">Congrats!</h1>
 				<p class="results-subtitle">
-					This quiz explored how people respond to minimalist versus expressive design. Minimalism emphasizes clarity and functionality, while expressiveness leans into personality and emotion. By comparing these styles, we aimed to understand how aesthetics influence our sense of innovation, trust, and engagement. As technology like AI and spatial computing redefines what digital products can be, your choices help us reflect on where design is heading.
+					By completing this quiz, you've explored how different UI design trends affect the way we perceive products, specifically emphasizing expressive versus minimalistic design. Minimalism is often associated with clarity and functionality, while expressiveness leans into personality and emotion. As trends constantly cycle, we're seeing styles that merge, evolve, and reappear in new forms.
+				</p>
+				<p class="results-subtitle">
+					While minimalistic design has been dominant these past few years, espcially in tech, there's a growing shift toward more expressive interfaces. As technology becomes more integrated into daily life, design may play a bigger role in shaping not just usability, but emotional resonance. Below, see how other people interpreted these comparisons and ask yourself: how do different design styles shape your perception?
 				</p>
 			</div>
 	
@@ -252,7 +255,7 @@
 					<img src="images/q1_left.png">
 					<img src="images/q1_right.png">
 				</div>
-				<p class="results-subtitle">This example compared the desig</p>
+				<p class="results-subtitle">This comparison shows Apple's shift from skeuomorphic to minimal design. In 2010 (left), iBooks used realistic textures like wood shelves to mimic real books, making digital reading feel familiar. By 2013 (right), Apple adopted a flatter, more minimal style to reflect users' growing comfort with digital interfaces and to create a more modern look. <span class="question-text">Do realistic textures and familiar metaphors still help us navigate technology, or do they now feel outdated? Will skeuomorphic elements become trending again in the future?</span></p>
 
 				<div class="data-viz">
 					<div class="results-box">					  
@@ -261,6 +264,7 @@
 							<div class="bar">
 								<div class="bar-fill" id="q1-left"></div>
 							</div>
+							<span class="percentage" id="q1-left-percent"></span>
 						</div>
 
 						<div class="bar-wrapper">
@@ -268,6 +272,7 @@
 							<div class="bar">
 								<div class="bar-fill" id="q1-right"></div>
 							</div>
+							<span class="percentage" id="q1-right-percent"></span>
 						</div>
 					</div>
 				</div>
@@ -283,7 +288,7 @@
 					<img class="horizontal-quiz-img" src="images/q2_right.png">
 				</div>
 
-				<p class="results-subtitle">This example compared the desig</p>
+				<p class="results-subtitle">One the left, are design components for Apple Vision Pro, which was first released in 2024, and leveraged glassmorphism. On the right shows Google's Matieral 3 design system announced in May of 2025, featuring bold colors and shapes and larger elements. <span class="question-text">Does the transparent aesthetic of glassmorphism feel more "futuristic," or do bold, expressive designs better prepare us for more human-centered technology interactions?</span></p>
 
 				<div class="data-viz">
 					<div class="results-box">					  
@@ -292,6 +297,7 @@
 							<div class="bar">
 								<div class="bar-fill" id="q2-left"></div>
 							</div>
+							<span class="percentage" id="q2-left-percent"></span>
 						</div>
 
 						<div class="bar-wrapper">
@@ -299,6 +305,7 @@
 							<div class="bar">
 								<div class="bar-fill" id="q2-right"></div>
 							</div>
+							<span class="percentage" id="q2-right-percent"></span>
 						</div>
 					</div>
 			</section>
@@ -309,11 +316,11 @@
 					<h1 class="question-title">Which of these feels more secure to use?</h1>
 				</div>
 				<div class="result-img-container">
-					<img class="horizontal-quiz-img" src="images/q3_left.png">
-					<img class="horizontal-quiz-img" src="images/q3_right.png">
+					<img src="images/q3_left.png">
+					<img src="images/q3_right.png">
 				</div>
 
-				<p class="results-subtitle">This example compared the desig</p>
+				<p class="results-subtitle">On the left features the card page from Chime, a mobile banking app founded in 2012. On the right is a concept banking app design that takes a more expressive approach, similar to Google's Material 3 design system. <span class="question-text">Does a more minimalistic versus expressive design affect your perception of security?</span></p>
 
 
 				<div class="data-viz">
@@ -323,6 +330,7 @@
 							<div class="bar">
 								<div class="bar-fill" id="q3-left"></div>
 							</div>
+							<span class="percentage" id="q3-left-percent"></span>
 						</div>
 
 						<div class="bar-wrapper">
@@ -330,6 +338,7 @@
 							<div class="bar">
 								<div class="bar-fill" id="q3-right"></div>
 							</div>
+							<span class="percentage" id="q3-right-percent"></span>
 						</div>
 					</div>
 			</section>
@@ -344,7 +353,7 @@
 					<img class="horizontal-quiz-img" src="images/q4_right.png">
 				</div>
 
-				<p class="results-subtitle">This example compared the desig</p>
+				<p class="results-subtitle">On the left is Airbnb's earlier flat design, while on the right shows their shift toward more dimensional elements with gradient icons and more visual depth. <span class="question-text">Does this shift from flat to dimensional design make the platform feel more welcoming and approachable, or do you prefer the cleaner, more straightforward aesthetic of flat design?</span></p>
 
 				<div class="data-viz">
 					<div class="results-box">					  
@@ -353,6 +362,7 @@
 							<div class="bar">
 								<div class="bar-fill" id="q4-left"></div>
 							</div>
+							<span class="percentage" id="q4-left-percent"></span>
 						</div>
 
 						<div class="bar-wrapper">
@@ -360,6 +370,7 @@
 							<div class="bar">
 								<div class="bar-fill" id="q4-right"></div>
 							</div>
+							<span class="percentage" id="q4-right-percent"></span>
 						</div>
 					</div>
 
