@@ -49,7 +49,7 @@
 	}
 
 	.no-overflow {
-		overflow-y: hidden;
+		overflow-y: visible;
 		overflow-x: hidden;
 		max-height: 750px;
 	}
@@ -466,6 +466,13 @@
 			background: white;
 		  }
 
+		  .user-selection {
+			font-family: "Inter", sans-serif;
+			color: #397D7F;
+			font-weight: 500;
+			margin-bottom: 16px;
+			text-align: center;
+		  }
 
 		  .bar-wrapper {
 			display: flex;

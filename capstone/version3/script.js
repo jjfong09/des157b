@@ -7,6 +7,7 @@ const questions = document.querySelectorAll(".quiz-question");
 const submitBtns = document.querySelectorAll(".submit-btn");
 const nextBtns = document.querySelectorAll(".nxt-btn");
 const introScreens = ["#title-screen", "#background-screen", "#intro-screen"];
+let userAnswers = {};
 
 console.log("questions:", questions);
 console.log("submit buttons:", submitBtns);
@@ -127,10 +128,12 @@ async function saveToParse(questionNumber, selectedAnswer) {
     response.set("questionNumber", questionNumber);
     response.set("selectedAnswer", selectedAnswer);
 
+    // Store answer locally
+    userAnswers[questionNumber] = selectedAnswer;
+
     try {
       const result = await response.save();
       console.log("Saved quiz response:", result);
-      // Optional: visually show the answer was saved or move to next question
     } catch (error) {
       console.error("Error saving quiz response:", error);
     }
@@ -166,6 +169,13 @@ async function countAnswersPerQuestion() {
   function updateBars(voteData) {
     for (const [question, answers] of Object.entries(voteData)) {
       const totalVotes = Object.values(answers).reduce((a, b) => a + b, 0);
+      
+      // Add user's selection text
+      const userSelection = userAnswers[question];
+      const selectionElement = document.getElementById(`q${question}-selection`);
+      if (selectionElement && userSelection) {
+        selectionElement.textContent = `You selected: ${userSelection}`;
+      }
   
       for (const [answer, count] of Object.entries(answers)) {
         const percent = totalVotes === 0 ? 0 : (count / totalVotes) * 100;
