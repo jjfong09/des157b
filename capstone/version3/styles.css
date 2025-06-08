@@ -1,0 +1,504 @@
+	/* CSS RESET*/
+
+	*{
+		box-sizing: border-box;
+	}
+
+	nav ul, nav ol {
+		list-style-type: none;
+	}
+
+	img{
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	h1, h2, h3, h4, p, ul, ol, a, span {
+		font-family: "Fraunces", serif;
+		margin: 0;
+		padding: 0;
+		color: rgb(0, 0, 0);
+		font-weight: 400;
+		letter-spacing: -0.03em;
+	}
+
+	p {
+		line-height: 1.4em;
+	}
+
+	/* END RESET */
+
+	/* ------------- GENERAL ---------------- */
+	.hidden {
+		display: none;
+		opacity: 0;
+		transform: translateY(20px);
+		transition: opacity 500ms ease, transform 500ms ease;
+	}
+
+	/* Add a new class for when element is visible */
+	.visible {
+		opacity: 1;
+		transform: translateY(0);
+		transition: opacity 500ms ease, transform 500ms ease;
+	}
+
+	body {
+		background-color: #F1F0E6;
+	}
+
+	.no-overflow {
+		overflow-y: hidden;
+		overflow-x: hidden;
+		max-height: 750px;
+	}
+
+	.overflow {
+		overflow-y: visible;
+	}
+
+	/* ------------- BUTTONS ---------------- */
+	button {
+		background-color: #113A2E;
+		color: white;
+		border-radius: 100px;
+		padding: 10px 16px;
+		border: none;
+		transition: background-color 0.3s ease, color 0.3s ease;
+		cursor: pointer;
+	}
+
+	button:hover {
+		background-color: #205747;	
+	}
+
+	.nxt-btn, .submit-btn {
+		box-shadow: 0px 77px 21px 0px rgba(0, 0, 0, 0.00), 0px 49px 20px 0px rgba(0, 0, 0, 0.01), 0px 28px 17px 0px rgba(0, 0, 0, 0.05), 0px 12px 12px 0px rgba(0, 0, 0, 0.09), 0px 3px 7px 0px rgba(0, 0, 0, 0.10);
+	}
+
+	/* ------------- TITLE SCREEN HEADER ---------------- */
+	
+	header {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+
+		position: absolute;
+		top: 30%;
+		left: 12%;
+		max-width: 550px;
+	}
+
+	header button {
+		width: fit-content;
+	}
+
+	header h1{
+		font-size: 5em;
+	}
+
+	header p {
+		margin-bottom: 28px;
+	}
+
+	#title-subtitle {
+		font-size: 1.2em;
+		font-family: "Inter", sans-serif;
+    	color: #736D62;
+		margin-top: 8px;
+	}
+
+	/* --- TITLE SHAPES ---- */
+
+	.title-purple {
+		width: 272px;
+		position: absolute;
+		bottom: -90px;
+		right: -40px;
+	}
+	
+	.title-orange {
+		width: 184px;
+		position: absolute;
+		right: -20px;
+		bottom: 375px;
+	}
+
+	.title-green{
+		width: 132px;
+		position: absolute;
+		right: 183px;
+		bottom: 230px;
+	}
+
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+		90% {
+			transform: rotate(360deg); /* hold the rotation */
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	.title-purple,
+	.title-green,
+	.title-orange,
+	.bg-green,
+	.bg-orange,
+	.bg-purple {
+		animation: spin 4s ease-in-out infinite;
+		transform-origin: center center;
+	}
+
+	/* --- BACKGROUND SHAPES ---- */
+	
+	.bg-green {
+		position: absolute;
+		width: 108px;
+		top: -20px;
+		left: 216px;
+	}
+
+	.bg-orange {
+		position: absolute;
+		width: 184px;
+		top: 0;
+		left: 0;
+	}
+
+	.bg-purple {
+		position: absolute;
+		width: 230px;
+		bottom: 150px;
+		right: -120px;
+	}
+
+	/* ------------- BACKGROUND SCREEN ---------------- */
+
+	#background-screen .content-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+
+		margin: 180px 300px;
+	}
+
+	#background-screen .text-container {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		margin-bottom: 58px;
+	}
+
+	#background-screen .text-container p {
+		font-family: "Inter", sans-serif;
+		color: #736D62;
+	}
+
+	/* --- IMAGES ---- */
+
+	#background-screen .content-container img {
+		height: 202px;
+		object-fit: cover;
+		border-radius: 11px;
+
+		box-shadow: 0px 85.276px 24.1px 0px rgba(0, 0, 0, 0.00), 0px 54.688px 22.246px 0px rgba(0, 0, 0, 0.01), 0px 30.588px 18.538px 0px rgba(0, 0, 0, 0.04), 0px 13.904px 13.904px 0px rgba(0, 0, 0, 0.06), 0px 3.708px 7.415px 0px rgba(0, 0, 0, 0.07);
+	}
+
+	#background-screen .img-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		flex: 1;
+		text-align: center;
+	}
+
+	#background-screen .img-container {
+		display: flex;
+		gap: 12px;
+		width: 100%;
+	}
+
+	#background-screen .img-caption {
+		display: flex;
+		flex-direction: column;
+		gap: 3px;
+		font-size: 0.9em;
+		font-weight: 400;
+		margin-top: 4px;
+	}
+
+	#background-screen .img-caption p:last-child {
+		font-family: "Inter", sans-serif;
+		font-size: 0.8em;
+		color: #736D62;
+		font-weight: 400;
+	}
+
+
+	/* ------------- INTRO SCREEN ---------------- */
+
+	#intro-screen .content-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		max-width: 600px;
+
+		margin: 200px 200px;
+	}
+
+	#intro-screen h1 {
+		font-size: 3.5em;
+		margin-bottom: 24px;
+	}
+
+	#intro-screen p{
+		font-family: "Inter", sans-serif;
+		font-weight: 400;
+		color: #736D62;
+	}
+
+	/*  button s
+
+
+	/* ------------- QUIZ STYLING ---------------- */
+
+	.quiz-text-container {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		max-width: 700px;
+
+		margin: 0px auto 40px auto;
+
+	}
+
+	.quiz-content-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		margin: 120px auto 75px auto;
+	}
+
+	.question-label{
+		color: #397D7F;
+		font-family: "Inter", serif;
+		font-weight: 400;
+	}
+
+	.question-title{
+		text-align: center;
+	}
+
+	.quiz-question button {
+		margin: 12px 20px;
+		width: 100px;
+		text-align: center;
+	}
+
+	.quiz-question{
+		text-align: center;
+	}
+
+	.img-sources {
+		text-align: center;
+		font-size: 0.6em;
+		font-family: 'Inter', sans-serif;
+		margin-top: 20px;
+		color: #736D62;
+	}
+
+	/* ------------- QUIZ IMAGES ---------------- */
+
+	.question-img-container {
+		display: flex;
+		justify-content: center;
+		gap: 16px;
+		margin-bottom: 40px;
+		/* width: auto;
+ 		height: 300px; */
+	}
+		
+	.question-img-container img {
+		width: auto;
+		height: 325px;
+		border-radius: 12px;
+	}
+
+	/*  SPECIAL CASES */
+
+	.question-img-container .horizontal-quiz-img {
+		height: 250px;
+	}
+	
+
+	/* ------------- QUIZ BUTTONS ---------------- */
+
+	#begin-btn {
+		margin-top: 21px;
+		padding: 21px 42px;
+	}
+
+	.answer-btn {
+		background-color: transparent;
+		color: #113A2E;
+		border: 2px solid #113A2E; 
+		border-radius: 100px;
+		padding: 10px 16px;
+		cursor: pointer;
+		font-weight: 500;
+		transition: background-color 0.3s ease, color 0.3s ease;
+	}
+
+	.answer-btn:hover {
+		background-color: #113a2e;
+		color: white;
+	}
+
+	.answer-btn.selected {
+		background-color: #113a2e;
+		color: white;
+	}
+
+	#background-screen .nxt-btn, 
+	#intro-screen .nxt-btn, 
+	.quiz-screen .nxt-btn {
+		display: flex;
+		justify-content: flex-end;
+
+		position: absolute;
+		bottom: 60px;
+		right: 80px;
+	}
+
+
+		/* ------------- RESULTS SLIDE ---------------- */
+
+		#results-text-container {
+			text-align: center;
+			margin: 0px auto 120px auto;
+			max-width: 660px;
+		}
+		
+		#results-text-container h1{
+			font-size: 5em;
+			margin-bottom: 42px;
+		}
+
+		.results-subtitle {
+			font-family: "Inter", sans-serif;
+			color: #736D62;
+			text-align: center;
+			max-width: 600px;
+			margin: 0 auto 12px auto;
+		}
+
+		.question-text {
+			font-weight: 600;
+			font-family: "Inter", sans-serif;
+		}
+
+		.question-result {
+			display: flex;
+			flex-direction: column;
+			gap: 28px;
+		}
+
+		#results-screen {
+			margin: 120px 200px;
+			background-color: #F1F0E6;
+		}
+
+		.result-img-container {
+			display: flex;
+			justify-content: center;
+			gap: 16px;
+		}
+	
+		.result-img-container img {
+			width: auto;
+			height: 325px;
+			border-radius: 12px;
+		}
+
+		.result-img-container .horizontal-quiz-img {
+			height: 250px;
+		}
+	
+		/*  SPECIAL CASES */
+	
+		.question-img-container .horizontal-quiz-img {
+			height: 250px;
+		}
+
+		#q4-result {
+			margin-bottom: 88px;
+		}
+
+		/* ------------- RESULTS BUTTONS ---------------- */
+
+		#results-btn-container {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 88px;
+		}
+
+		#retake-quiz-btn {
+			padding: 21px 42px;
+		}
+		/* ------------- DATA VIZ BARS ---------------- */
+
+
+		.results-box {
+			max-width: 600px;
+			border: 1px solid #ccc;
+			margin: 8px auto 120px auto;
+
+			padding: 24px;
+			border-radius: 12px;
+			background: white;
+		  }
+
+
+		  .bar-wrapper {
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+			gap: 12px;
+		  }
+
+		  .bar-wrapper .label {
+				color: #123c34;
+		  }
+		  
+		  .bar {
+			width: 100%;
+			background-color: #eee;
+			height: 24px;
+			border-radius: 12px;
+			overflow: hidden;
+		  }
+		  
+		  .bar-fill {
+			height: 100%;
+			width: 0%;
+			background-color: #123c34; /* Change per style */
+			transition: width 0.5s ease;
+			border-radius: 12px;
+		  }
+
+		  .percentage {
+			margin-left: 10px;
+			font-size: 14px;
+			color: #666;
+			min-width: 45px;
+		  }
+	
+		  

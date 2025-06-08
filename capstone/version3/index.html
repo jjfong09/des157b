@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Capstone</title>
+
+	<!--/ /-------- Normalize CSS --------/ /-->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+	<!--/ /-------- Google Fonts --------/ /-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+
+	<!--/ /-------- Custom CSS --------/ /-->
+	<link rel="stylesheet" href="styles.css">
+	
+</head>
+<body class="no-overflow">
+
+	<section id="title-screen"> 
+		<header>
+			<h1>Visual Design Trends Quiz</h1>
+			<p id="title-subtitle">An experiment in visual intuition and design prediction.</p>	
+			<button id="begin-btn" class="nxt-btn">Let's Begin</button>
+		</header>
+
+		<img class="title-purple" src="images/purple_flower.png" alt="purple shape decoration">
+		<img class="title-orange" src="images/orange_star.png" alt="orange shape decoration">
+		<img class="title-green" src="images/green_spike.png" alt="green shape decoration">
+	</section>
+
+	<section id="background-screen" class="hidden">
+		<!-- SHAPES -->
+		<aside class="shape-container">
+			<img class="bg-purple" src="images/purple_spike.png" alt="purple shape decoration">
+			<img class="bg-orange" src="images/orange_star.png" alt="orange shape decoration">
+			<img class="bg-green" src="images/green_clover.png" alt="green shape decoration">	
+		 </aside>
+		
+		<div class="content-container">
+
+			<div class="text-container">
+				<h1>But first some background...</h1>
+				<p>The change in design trends over the years not only reflect shifts in aesthetics, but also shifts culture, and technology. Understanding them helps us recognize why certain styles feel "modern" or "dated," and how visual choices shape our experience with the product we use everyday. Below are some popular design trends from he past few decades, largely influenced by new tech and major companies from Apple to Airbnb.
+				</p>	
+			</div>
+		
+			<aside class="img-container">
+				<div class="img-wrapper">
+					<img src="images/apple.jpg" alt="Apple Icons">
+					<div class="img-caption">
+						<p>Skeuomorphism (1980)</p>
+						<p>(blog.logrocket.com)</p>
+					</div>
+				</div>
+
+				<div class="img-wrapper">
+					<img src="images/neobrutal.jpg"  alt="Neobrutalism">
+					<div class="img-caption">
+						<p>Brutalism (2015)</p>
+						<p>(medium.com)</p>
+					</div>
+				</div>
+
+				<div class="img-wrapper">
+					<img src="images/control_center.png"  alt="Apple Control Center">
+					<div class="img-caption">
+						<p>Glassmorphism (2020)</p>
+						<p>(support.apple.com)</p>
+					</div>
+				</div>
+
+				<div class="img-wrapper">
+					<img src="images/airbnb.jpg"  alt="Airbnb App">
+					<div class="img-caption">
+						<p>3D UI (2024)</p>
+						<p>(www.airbnb.com)</p>
+					</div>
+				</div>
+			</aside>
+
+			<div class="btn-container">
+				<button class="nxt-btn">Next</button>
+			</div>
+
+		</div>
+	</section>
+
+	<section id="intro-screen" class="hidden">
+		<div class="content-container">
+			<div class="text-container">
+				<h1>This interactive quiz is designed to test how we see, interpret, and predict interface design.</h1>
+
+				<p>From skeuomorphic buttons to AI-generated dashboards, the way interfaces look and feel is shaped by the tools we use, the tech we adopt, and the cultural trends we absorb, and they often influence us without us even noticing.</p>
+			</div>
+		</div>
+
+		<div class="btn-container">
+			<button class="nxt-btn">Begin The Quiz</button>
+		</div>
+
+		<aside class="shape-container">
+			<img class="bg-purple" src="images/purple_spike.png" alt="purple shape decoration">
+			<img class="bg-orange" src="images/orange_star.png" alt="orange shape decoration">
+			<img class="bg-green" src="images/green_clover.png" alt="green shape decoration">	
+		</aside>
+
+	</section>
+
+	<section id="q1-screen" class="quiz-screen hidden">
+		<div class="quiz-content-container">
+			<div class="quiz-text-container">
+				<p class="question-label">Question 1</p>
+				<h1 class="question-title">Which design style feels more engaging to you</h1>
+			</div>
+			
+			<div class="question-img-container">
+				<img src="images/q1_left.png"  alt="Old Apple Books Screen">
+				<img src="images/q1_right.png" alt="Modern Apple Books Screen">
+			</div>
+
+			<div class="quiz-question" id="q1">
+				<div class="answer-btn-container">
+					<button class="answer-btn" data-answer="Left">Left</button>
+					<button class="answer-btn" data-answer="Right">Right</button>
+				</div>
+				<button class="submit-btn">Next</button>
+			</div>
+
+			<p class="img-sources">Image Sources: webdesignmuseum.org</p>
+		</div>
+
+		<aside class="shape-container">
+			<img class="bg-purple" src="images/purple_spike.png" alt="purple shape decoration">
+			<img class="bg-orange" src="images/orange_star.png" alt="orange shape decoration">
+			<img class="bg-green" src="images/green_clover.png" alt="green shape decoration">	
+		</aside>
+	</section>
+
+	<section id="q2-screen" class="quiz-screen hidden">
+		<div class="quiz-content-container">
+			<div class="quiz-text-container">
+				<p class="question-label">Question 2</p>
+				<h1 class="question-title">Which design style do you associate more with innovation and the future?</h1>
+			</div>
+			
+			<div class="question-img-container">
+				<img class="horizontal-quiz-img" src="images/q2_left.png"  alt="Apple Vision Pro Design">
+				<img class="horizontal-quiz-img" src="images/q2_right.png"  alt="Google Expressive Design">
+			</div>
+
+			<div class="quiz-question" id="q2">
+				<div class="answer-btn-container">
+					<button class="answer-btn" data-answer="Left">Left</button>
+					<button class="answer-btn" data-answer="Right">Right</button>
+				</div>
+				<button class="submit-btn">Next</button>
+			</div>
+
+			<p class="img-sources">Image Sources: linkedin.com, blog.google</p>
+		</div>
+	
+		<aside class="shape-container">
+			<img class="bg-purple" src="images/purple_spike.png" alt="purple shape decoration">
+			<img class="bg-orange" src="images/orange_star.png" alt="orange shape decoration">
+			<img class="bg-green" src="images/green_clover.png" alt="green shape decoration">	
+		</aside>
+	</section>
+
+
+<section id="q3-screen" class="quiz-screen hidden">
+		<div class="quiz-content-container">
+			<div class="quiz-text-container">
+				<p class="question-label">Question 3</p>
+				<h1 class="question-title">Which of these feels more secure to use?</h1>
+			</div>
+			
+			<div class="question-img-container">
+				<img src="images/q3_left.png" alt="Chime Banking App Screen">
+				<img src="images/q3_right.png"  alt="Mobile Banking App Screen">
+			</div>
+
+			<div class="quiz-question" id="q3">
+				<div class="answer-btn-container">
+					<button class="answer-btn" data-answer="Left">Left</button>
+					<button class="answer-btn" data-answer="Right">Right</button>
+				</div>
+				<button class="submit-btn">Next</button>
+			</div>
+
+			<p class="img-sources">Image Sources: chime.com, dribble.com</p>
+		</div>
+	
+		<aside class="shape-container">
+			<img class="bg-purple" src="images/purple_spike.png" alt="purple shape decoration">
+			<img class="bg-orange" src="images/orange_star.png" alt="orange shape decoration">
+			<img class="bg-green" src="images/green_clover.png" alt="green shape decoration">	
+		</aside>
+	</section>
+
+	<section id="q4-screen" class="quiz-screen hidden">
+		<div class="quiz-content-container">
+			<div class="quiz-text-container">
+				<p class="question-label">Question 4</p>
+				<h1 class="question-title">Which version of Airbnb's design feels more welcoming to you?</h1>
+			</div>
+			
+			<div class="question-img-container">
+				<img class="horizontal-quiz-img" src="images/q4_left.png" alt="Old Airbnb">
+				<img class="horizontal-quiz-img" src="images/q4_right.png"  alt="New Airbnb">
+			</div>
+
+			<div class="quiz-question" id="q4">
+				<div class="answer-btn-container">
+					<button class="answer-btn" data-answer="Left">Left</button>
+					<button class="answer-btn" data-answer="Right">Right</button>
+				</div>
+				<button class="submit-btn">Submit</button>
+			</div>
+
+			<p class="img-sources">Image Sources: airbnb.com, designweek.co.uk</p>
+		</div>
+	
+		<aside class="shape-container">
+			<img class="bg-purple" src="images/purple_spike.png" alt="purple shape decoration">
+			<img class="bg-orange" src="images/orange_star.png" alt="orange shape decoration">
+			<img class="bg-green" src="images/green_clover.png" alt="green shape decoration">	
+		</aside>
+	</section>
+	
+	  
+	<!-- TEMP FINAL SCREEN -->
+	<section id="results-screen" class="quiz-screen hidden">
+		<div class="results-container">
+			<div id="results-text-container">
+				<h1 class="results-title">Congrats!</h1>
+				<p class="results-subtitle">
+					By completing this quiz, you've explored how different UI design trends affect the way we perceive products, specifically emphasizing expressive versus minimalistic design. Minimalism is often associated with clarity and functionality, while expressiveness leans into personality and emotion. As trends constantly cycle, we're seeing styles that merge, evolve, and reappear in new forms.
+				</p>
+				<p class="results-subtitle">
+					While minimalistic design has been dominant these past few years, espcially in tech, there's a growing shift toward more expressive interfaces. As technology becomes more integrated into daily life, design may play a bigger role in shaping not just usability, but emotional resonance. Below, see how other people interpreted these comparisons and ask yourself: how do different design styles shape your perception?
+				</p>
+			</div>
+	
+			<section id="q1-result" class="question-result">
+				<div class="quiz-text-container">
+					<p class="question-label">Question 1</p>
+					<h1 class="question-title">Which design style feels more engaging to you</h1>
+				</div>
+				<!-- <h2>Question 1</h2> -->
+				<div class="result-img-container">
+					<img src="images/q1_left.png" alt="Apple books old">
+					<img src="images/q1_right.png" alt="Apple books new">
+				</div>
+				<p class="results-subtitle">This comparison shows Apple's shift from skeuomorphic to minimal design. In 2010 (left), iBooks used realistic textures like wood shelves to mimic real books, making digital reading feel familiar. By 2013 (right), Apple adopted a flatter, more minimal style to reflect users' growing comfort with digital interfaces and to create a more modern look. <span class="question-text">Do realistic textures and familiar metaphors still help us navigate technology, or do they now feel outdated? Will skeuomorphic elements become trending again in the future?</span></p>
+
+				<div class="data-viz">
+					<div class="results-box">					  
+						<div class="bar-wrapper">
+							<span class="label">Left</span>
+							<div class="bar">
+								<div class="bar-fill" id="q1-left"></div>
+							</div>
+							<span class="percentage" id="q1-left-percent"></span>
+						</div>
+
+						<div class="bar-wrapper">
+							<span class="label">Right</span>
+							<div class="bar">
+								<div class="bar-fill" id="q1-right"></div>
+							</div>
+							<span class="percentage" id="q1-right-percent"></span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="q2-result" class="question-result">
+				<div class="quiz-text-container">
+					<p class="question-label">Question 2</p>
+					<h1 class="question-title">Which design style do you associate more with innovation and the future?</h1>
+				</div>
+				<div class="result-img-container">
+					<img class="horizontal-quiz-img" src="images/q2_left.png" alt="Apple Vision Pro">
+					<img class="horizontal-quiz-img" src="images/q2_right.png" alt="Google Material 3">
+				</div>
+
+				<p class="results-subtitle">One the left, are design components for Apple Vision Pro, which was first released in 2024, and leveraged glassmorphism. On the right shows Google's Matieral 3 design system announced in May of 2025, featuring bold colors and shapes and larger elements. <span class="question-text">Does the transparent aesthetic of glassmorphism feel more "futuristic," or do bold, expressive designs better prepare us for more human-centered technology interactions?</span></p>
+
+				<div class="data-viz">
+					<div class="results-box">					  
+						<div class="bar-wrapper">
+							<span class="label">Left</span>
+							<div class="bar">
+								<div class="bar-fill" id="q2-left"></div>
+							</div>
+							<span class="percentage" id="q2-left-percent"></span>
+						</div>
+
+						<div class="bar-wrapper">
+							<span class="label">Right</span>
+							<div class="bar">
+								<div class="bar-fill" id="q2-right"></div>
+							</div>
+							<span class="percentage" id="q2-right-percent"></span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="q3-result" class="question-result">
+				<div class="quiz-text-container">
+					<p class="question-label">Question 3</p>
+					<h1 class="question-title">Which of these feels more secure to use?</h1>
+				</div>
+				<div class="result-img-container">
+					<img src="images/q3_left.png" alt="Chime">
+					<img src="images/q3_right.png" alt="Concept Finance App">
+				</div>
+
+				<p class="results-subtitle">On the left features the card page from Chime, a mobile banking app founded in 2012. On the right is a concept banking app design that takes a more expressive approach, similar to Google's Material 3 design system. <span class="question-text">Does a more minimalistic versus expressive design affect your perception of security?</span></p>
+
+
+				<div class="data-viz">
+					<div class="results-box">					  
+						<div class="bar-wrapper">
+							<span class="label">Left</span>
+							<div class="bar">
+								<div class="bar-fill" id="q3-left"></div>
+							</div>
+							<span class="percentage" id="q3-left-percent"></span>
+						</div>
+
+						<div class="bar-wrapper">
+							<span class="label">Right</span>
+							<div class="bar">
+								<div class="bar-fill" id="q3-right"></div>
+							</div>
+							<span class="percentage" id="q3-right-percent"></span>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section id="q4-result" class="question-result">
+				<div class="quiz-text-container">
+					<p class="question-label">Question 4</p>
+					<h1 class="question-title">Which version of Airbnb's design feels more welcoming to you?</h1>
+				</div>
+				<div class="result-img-container">
+					<img class="horizontal-quiz-img" src="images/q4_left.png" alt="Old Airbnb">
+					<img class="horizontal-quiz-img" src="images/q4_right.png" alt="Old Airbnb">
+				</div>
+
+				<p class="results-subtitle">On the left is Airbnb's earlier flat design, while on the right shows their shift toward more dimensional elements with gradient icons and more visual depth. <span class="question-text">Does this shift from flat to dimensional design make the platform feel more welcoming and approachable, or do you prefer the cleaner, more straightforward aesthetic of flat design?</span></p>
+
+				<div class="data-viz">
+					<div class="results-box">					  
+						<div class="bar-wrapper">
+							<span class="label">Left</span>
+							<div class="bar">
+								<div class="bar-fill" id="q4-left"></div>
+							</div>
+							<span class="percentage" id="q4-left-percent"></span>
+						</div>
+
+						<div class="bar-wrapper">
+							<span class="label">Right</span>
+							<div class="bar">
+								<div class="bar-fill" id="q4-right"></div>
+							</div>
+							<span class="percentage" id="q4-right-percent"></span>
+						</div>
+					</div>
+				</div>
+
+				<div id="results-btn-container">
+					<button id="retake-quiz-btn">Retake Quiz</button>
+				</div>
+
+			</section>
+	
+			
+
+		<aside class="shape-container">
+			<img class="bg-purple" src="images/purple_spike.png" alt="purple shape decoration">
+			<img class="bg-orange" src="images/orange_star.png" alt="orange shape decoration">
+			<img class="bg-green" src="images/green_clover.png" alt="green shape decoration">	
+		</aside>
+		</div>
+	</section>
+		
+	
+
+	<!--/ /-------- TESTING BLOCK --------/ /-->
+
+	  	 <!-- <div class="quiz-question" id="q1">
+		<button class="answer-btn" data-answer="Left">Left</button>
+		<button class="answer-btn" data-answer="Right">Right</button>
+		<button class="submit-btn">Submit</button>
+	</div>
+
+	<div class="quiz-question hidden" id="q2">
+		<p>Question 2: Which is more functional?</p>
+		<button class="answer-btn" data-answer="Minimal">Minimal</button>
+		<button class="answer-btn" data-answer="Expressive">Expressive</button>
+		<button class="submit-btn">Submit</button>
+	</div> -->
+
+
+	<!--/ /-------- PARSE JS --------/ /-->
+	<script src="https://unpkg.com/parse/dist/parse.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
